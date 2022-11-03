@@ -1,107 +1,19 @@
 # Java-grade-processing-program
-'''java
-import java.util.Scanner;
-
-class People{
-	private String name;  //성명
-	private int KorG;     //국어
-	private int EngG;     //영어
-	private int MathG;    //수학
-	private int SumG;     //합계
-	private double AvgG;  //평균
-	private int RankG;    //석차
-	
-	void setName(String name) {
-		this.name = name; //화면에 입력받을 이름값(매개변수)을 클레스 내부에서 선언한 name 변수에 저장 
-	}
-	void setKorG(int kor) {
-		this.KorG = kor;
-	}		
-	void setEngG(int eng) {
-		this.EngG = eng;
-	}
-	void setMathG(int math) {
-		this.MathG = math;
-	}
-	void setRankG(int rank) {
-		this.RankG = rank;
-	}
-	
-	String getName() {
-		return this.name; //적절한 데이터 형식으로 변수에 저장되어 있는 값을 반환하는 메소드
-	}
-	int getKor() {
-		return this.KorG;
-	}
-	int getEng() {
-		return this.EngG;
-	}
-	int getMath() {
-		return this.MathG;
-	}
-	int getSum() {
-		return this.getKor() + this.getEng() + this.getMath(); //총점계산 메소드
-	}
-	double getAvg() {
-		return this.getSum()/3; //평균 계산 메소드
-	}
-	int getRank() {
-		return this.RankG;//적절한 데이터 형식으로 변수(RankG에 저장되어 있는 값을 반환하는 메소드)
-	}
-	void printScore() {	 //변수 저장값들을 화면에 출력해주는 메소드)
-		System.out.printf(" %3s %3d %3d %3d %3d %3.2f %3d \n", this.getName(),this.getKor(),this.getEng(), this.getMath(), this.getSum(), this.getAvg(), this.getRank() ) ;		
-	}	
-}
-
-public class GradeP {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		Scanner input = new Scanner(System.in);
-				
-		System.out.print("몇명의 성적처리를 하나요(숫자입력)? ");
-		int num = input.nextInt();	  
-		
-		//객체배열 선언
-		People stu[] = new People[num];
-		
-		//객체배열 초기화
-        for(int i=0; i< stu.length ; i++) {
-        	stu[i] = new People();
-		}
-        // 키보드 데이터입력
-        for(int i=0; i<stu.length ; i++) {        	
-        		System.out.print("성명을 입력하세요: ");
-        		stu[i].setName(input.next());
-        		System.out.print("국어 점수를 입력하세요: ");
-        		stu[i].setKorG(input.nextInt());
-        		System.out.print("영어 점수를 입력하세요: ");
-        		stu[i].setEngG(input.nextInt());
-        		System.out.print("수학 점수를 입력하세요: ");
-        		stu[i].setMathG(input.nextInt());
-        }
-
-        // 석차 처리        
-        for(int i=0; i< stu.length ; i++) {    
-        	int rank=1;
-        	for(int j=0 ; j < stu.length; j++) {
-        		if (stu[i].getSum() < stu[j].getSum()) rank ++; 
-        	}
-        	stu[i].setRankG(rank);
-        }
-        
-        System.out.println("=================출력=======================");
-        System.out.printf("%3s %3s %2s %2s %3s %3s %4s \n", "성명","국어","영어","수학","합계","평균","석차");
-        for(int i=0; i< stu.length ; i++) {
-        	stu[i].printScore();
-		}	        
-        
-	}
-}
-
-
-'''
-
+### 변수선언
+![image](https://user-images.githubusercontent.com/102803326/199651340-e763e49b-b4d9-4e4c-8d71-d2c0ae576c09.png)
+### 화면에 입력받을 이름값(매개변수)을 클레스 내부에서 선언한 name 변수에 저장 
+![image](https://user-images.githubusercontent.com/102803326/199651445-039e3eb5-f1c6-472a-a8e0-cad84ac2ef7b.png)
+### 적절한 데이터 형식으로 변수에 저장되어 있는 값을 반환하는 메소드
+ ![image](https://user-images.githubusercontent.com/102803326/199651475-349f13cf-f31e-4653-9898-dcd3f9ce9480.png)
+### 평균 계산 메소드
+![image](https://user-images.githubusercontent.com/102803326/199651505-b401afea-4387-4f58-ac9d-9ae5b8efa51c.png)
+### 변수 저장값들을 화면에 출력해주는 메소드
+![image](https://user-images.githubusercontent.com/102803326/199651638-3346632e-85c5-41f1-97e3-86bfc386dc12.png)
+### 객체배열 선언 후 초기화
+![image](https://user-images.githubusercontent.com/102803326/199651689-c0a13aeb-9b70-4096-8501-363d3f427567.png)
+### 데이터 입력
+![image](https://user-images.githubusercontent.com/102803326/199651710-716266d4-dc8a-4917-947d-7644b618801f.png)
+### 석차처리
+![image](https://user-images.githubusercontent.com/102803326/199651748-f433529e-e72c-4a68-b7b9-b42938d25d33.png)
 
 
